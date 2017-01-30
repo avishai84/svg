@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+	<style>
+		.hide{
+			display:none;
+		}
+		.show{
+			display:block;
+			width:100%;
+			height:auto;
+		}
+		svg{width:30%; height:auto;}
+		svg:nth-child(7) circle{ animation: grow 2s infinite;
+		transform-origin:bottom}
+		@keyframes grow{
+			0%{ transform:scale(1);}
+			50%{transform:scale(0.5);}
+			100%{transform:scale(1);}
+		}
+		text{
+			font-family: cursive;
+			font-size:60px;
+			font-weight: 800;
+			text-align: center;
+		}
+		
+	</style>
+</head>
+<body>
+<h1>How to create SVG File</h1>
+<h2>SVG Img</h2>
+<img src="img.svg" alt="svg">
+
+<h2>Inline SVG</h2>
+	<p>With inline SVG we can have a access to the elements</p>
+	<h5>What can we do to the SVG?</h5>
+	<ol>
+	<li>CSS manipulation of inner elements</li>
+	<li>DOM manipulation via javascript</li>
+	<li>control background, animation and psuedu states.</li>
+	<li>https://www.w3.org/TR/SVG11/</li>	
+	</ol>
+
+	
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 120 120" class="hide">
+		<symble id="phone">
+			<rect height="100" width="70" fill="grey" stroke="red" stroke-width="7" x="7" y="5" rx="5" ry="10"/>
+			<circle cx="40" cy="103" r="3" />	
+		</symble>	
+		</svg>
+
+
+
+	<h5>SVG with Text</h5>	
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 460 420" >
+		
+		<circle r="210" cy="120" cx="150"/>	
+		<polygon height="200" width="270" points="219,47,379,367,61,367"  fill="green" stroke="pink" stroke-width="4"/>	
+		<text x="200" y="250" stroke="white">SVG</text>
+		</svg>
+	<h6>Another phone</h6>
+	<svg xmlns="http://www.w3.org/2000/svg" 
+		 viewBox="0 0 70 100" 
+		 class="show"
+		 xmlns:xlink="http://www.w3.org/1999/xlink">
+		<use xlink:href="#phone"/>
+	</svg>
+</body>
+</html>
